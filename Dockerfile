@@ -16,8 +16,8 @@ COPY . .
 # Build the Vue.js app for production
 RUN npm run build
 
-# Expose port 80
-EXPOSE 80
+# Expose port 3000
+EXPOSE 3000
 
 # Define the command to run the application
 CMD [ "npm", "run", "dev" ]
