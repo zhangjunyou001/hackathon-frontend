@@ -1,5 +1,5 @@
 body{
-    background-color: #F1F1F1;
+    background-image: url(../img/benefit-of-school-technology-1.jpg);
 }
 
 *, :after, :before {
@@ -33,7 +33,6 @@ a{
     min-height: 750px;
     text-align: center;
     font-size: 14px;
-    background-color: #f1f1f1;
 }
 
 /*表单样式*/
@@ -47,10 +46,21 @@ a{
 }
 
 .sign .logo{
-    position: absolute;
+    position: relative;
     top: 56px;
     left: 50px;
+    width: 252px;
+    height: 140px;
 }
+
+.sign .logo .logoimg{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    width: 252px;
+    height: 140px;
+}
+
 
 
 /*登录注册文字*/

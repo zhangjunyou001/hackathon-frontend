@@ -328,11 +328,11 @@ function lrFun(type) {
                     '<div>'+
                         '<ol class="e-login-options">'+
                             '<li>'+
-                                '<input id="u-email" type="text" placeholder="请输入登录邮箱"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
+                                '<input id="u-email" type="text" placeholder="Please input登录邮箱"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
                                 '<p class="lr-tip-wrap"></p>'+
                             '</li>'+
                             '<li>'+
-                                '<input id="u-password" type="password" placeholder="请输入密码"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
+                                '<input id="u-password" type="password" placeholder="Please input密码"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
                                 '<p class="lr-tip-wrap"></p>'+
                             '</li>'+
                         '</ol>'+
@@ -357,15 +357,15 @@ function lrFun(type) {
                     '<div>'+
                         '<ol class="e-login-options">'+
                             '<li>'+
-                                '<input id="u-email-reg" type="text" placeholder="请输入登录邮箱"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
+                                '<input id="u-email-reg" type="text" placeholder="Please input登录邮箱"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
                                 '<p class="lr-tip-wrap"></p>'+
                             '</li>'+
                             '<li>'+
-	                            '<input id="u-mobile-reg" type="text" placeholder="请输入用户手机号"  name="" value="" onkeyup="$(this).next().html(\'\');" maxlength="11">'+
+	                            '<input id="u-mobile-reg" type="text" placeholder="Please input用户手机号"  name="" value="" onkeyup="$(this).next().html(\'\');" maxlength="11">'+
 	                            '<p class="lr-tip-wrap"></p>'+
 	                        '</li>'+
                             '<li>'+
-                                '<input id="u-password-reg" type="password" placeholder="请输入密码"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
+                                '<input id="u-password-reg" type="password" placeholder="Please input密码"  name="" value="" onkeyup="$(this).next().html(\'\');">'+
                                 '<p class="lr-tip-wrap"></p>'+
                             '</li>'+
                             '<li>'+
@@ -373,7 +373,7 @@ function lrFun(type) {
                                 '<p class="lr-tip-wrap"></p>'+
                             '</li>'+
                             '<li>'+
-                                '<input id="u-randomcode-reg" class="fl" style="width: 100px;" type="text" placeholder="请输入验证码"  name="" value="" onkeyup="$(this).next().next().next().html(\'\');" maxlength="4">'+
+                                '<input id="u-randomcode-reg" class="fl" style="width: 100px;" type="text" placeholder="Please input验证码"  name="" value="" onkeyup="$(this).next().next().next().html(\'\');" maxlength="4">'+
                                 '<a href="javascript:void(0)" title="" class="vam ml10 disIb fl"><img onclick="this.src=\'/ran/random?random=\'+Math.random()" alt="验证码，点击图片更换" src="/ran/random" width="86" height="40"></a>'+
                                 '<span class="c-999 fl ml10">看不清<br><a href="javascript:void(0)" class="js-verify-refresh c-green" onclick="$(this).parent().prev().find(\'img\').click()">换一张</a></span>'+
                                 '<p class="lr-tip-wrap"><span class="c-red"></p>'+
@@ -479,11 +479,11 @@ function dialogLogin(type){
     $("#u-password").next().html('');
     $(".e-l-jy").html('');
     if(userName==""||userName==null){
-    	$("#u-email").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入正确的邮箱！</span>');
+    	$("#u-email").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input正确的邮箱！</span>');
         return false;
     }
     if(pwd==""||pwd==null){
-    	$("#u-password").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入正确的密码！</span>');
+    	$("#u-password").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input正确的密码！</span>');
         return false;
     }
 	$.ajax({
@@ -507,7 +507,7 @@ function dialogLogin(type){
 			}
 		},
 		error:function(error){
-			alert("系统繁忙，请稍后再操作！");
+			alert("System running busy, please retry later！");
 		}
 	});
 }
@@ -519,45 +519,45 @@ function dialogRegister() {
 	$(".e-l-jy").html('');
 	var emailVal=$("#u-email-reg").val();
 	if(emailVal==""){//验证邮箱是否为空
-		$("#u-email-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入邮箱！</span>');
+		$("#u-email-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input email address！</span>');
 		return;
 	}
 	var reg=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_])+(.[a-zA-Z0-9_])+/; //验证邮箱正则
 	if(reg.test(emailVal)==false){//格式不正确
-		$("#u-email-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入正确的邮箱！</span>');
+		$("#u-email-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input correct email address！</span>');
 		return;
 	};
 	
 	var mobileVal=$("#u-mobile-reg").val();
 	if(mobileVal==""){//验证手机是否为空
-		$("#u-mobile-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入用户手机号！</span>');
+		$("#u-mobile-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input cell number！</span>');
 		return;
 	}
 	var reg=/^(13[0-9]|15[012356789]|18[012356789]|14[57]|17[012356789])[0-9]{8}$/; //验证手机正则
 	if(reg.test(mobileVal)==false){//格式不正确
-		$("#u-mobile-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入正确的手机！</span>');
+		$("#u-mobile-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input correct cell number！</span>');
 		return;
 	};
 	
 	if($("#u-password-reg").val().trim()==""){//验证密码是否为空
-		$("#u-password-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入密码！</span>');
+		$("#u-password-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input password！</span>');
 		return;
 	}
 	if($("#u-password-reg").val().length<6){//验证密码长度
-		$("#u-password-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>密码长度不能小于六位！</span>');
+		$("#u-password-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Password need to be more than 6 digits！</span>');
 		return;
 	}
 	if(($("#u-password-reg").val()).indexOf(" ")!=-1){
-		$("#u-password-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>密码不能包含空格！</span>');
+		$("#u-password-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Password shouldn\'t contain space！</span>');
 		return false;
 	}
 	if($("#u-passwordre-reg").val().trim()==""){//验证确认密码是否为空
-		$("#u-passwordre-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入确认密码！</span>');
+		$("#u-passwordre-reg").next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input confirmation password！</span>');
 		return;
 	}
 	
 	if($("#u-randomcode-reg").val().trim()==""){//验证 验证码是否为空
-		$("#u-randomcode-reg").next().next().next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>请输入验证码！</span>');
+		$("#u-randomcode-reg").next().next().next().html('<span class="c-orange"><em class="icon16 u-a-cw">&nbsp;</em>Please input verification code！</span>');
 		return;
 	}
 
@@ -578,7 +578,7 @@ function dialogRegister() {
 			}
 		},
 		error : function(error) {
-			$(".e-l-jy").html('<font class="fsize12 c-orange">系统繁忙，请稍后再操作</font>');
+			$(".e-l-jy").html('<font class="fsize12 c-orange">System running busy, please retry later</font>');
 		}
 	});
 }
