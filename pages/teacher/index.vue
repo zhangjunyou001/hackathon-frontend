@@ -2,12 +2,10 @@
   <div id="aCoursesList" class="bg-fa of">
     <!-- 讲师列表 开始 -->
     <section class="container">
-      <header class="comm-title all-teacher-title">
-        <h2 class="fl tac">
-          <span class="c-333">全部讲师</span>
-        </h2>
+      <header class="all-teacher-title">
+        
         <section class="c-tab-title">
-          <a id="subjectAll" title="全部" href="#">全部</a>
+          <a id="subjectAll" title="" href="#"></a>
           <!-- <c:forEach var="subject" items="${subjectList }">
                             <a id="${subject.subjectId}" title="${subject.subjectName }" href="javascript:void(0)" onclick="submitForm(${subject.subjectId})">${subject.subjectName }</a>
           </c:forEach>-->
@@ -49,39 +47,39 @@
         <!-- 公共分页 开始 -->
         <!-- 公共分页 开始 -->
       <div>
-        <div class="paging">
+        <div class="paging" v-if="data.pages > 1">
           <!-- undisable这个class是否存在，取决于数据属性hasPrevious -->
           <a
             :class="{undisable: !data.hasPrevious}"
             href="#"
-            title="首页"
-            @click.prevent="gotoPage(1)">首页</a>
+            title="1"
+            @click.prevent="gotoPage(1)">1</a>
 
           <a
             :class="{undisable: !data.hasPrevious}"
             href="#"
-            title="前一页"
+            title="Previous Page"
             @click.prevent="gotoPage(data.current-1)">&lt;</a>
 
           <a
             v-for="page in data.pages"
             :key="page"
             :class="{current: data.current == page, undisable: data.current == page}"
-            :title="'第'+page+'页'"
+            :title="''+page+' Page'"
             href="#"
             @click.prevent="gotoPage(page)">{{ page }}</a>
 
           <a
             :class="{undisable: !data.hasNext}"
             href="#"
-            title="后一页"
+            title="Next Page"
             @click.prevent="gotoPage(data.current+1)">&gt;</a>
 
           <a
             :class="{undisable: !data.hasNext}"
             href="#"
-            title="末页"
-            @click.prevent="gotoPage(data.pages)">末页</a>
+            title="Last Page"
+            @click.prevent="gotoPage(data.pages)">{{data.pages}}</a>
 
           <div class="clear"/>
         </div>

@@ -106,35 +106,35 @@
         </div>
         <!-- 公共分页 开始 -->
         <div>
-      <div class="paging">
+      <div class="paging" v-if="data.pages > 1">
         <!-- undisable这个class是否存在，取决于数据属性hasPrevious -->
         <a
           :class="{undisable: !data.hasPrevious}"
           href="#"
-          title="首页"
-          @click.prevent="gotoPage(1)">首</a>
+          title="First Page"
+          @click.prevent="gotoPage(1)">1</a>
         <a
           :class="{undisable: !data.hasPrevious}"
           href="#"
-          title="前一页"
+          title="Previous Page"
           @click.prevent="gotoPage(data.current-1)">&lt;</a>
         <a
           v-for="page in data.pages"
           :key="page"
           :class="{current: data.current == page, undisable: data.current == page}"
-          :title="'第'+page+'页'"
+          :title="''+page+' Page'"
           href="#"
           @click.prevent="gotoPage(page)">{{ page }}</a>
         <a
           :class="{undisable: !data.hasNext}"
           href="#"
-          title="后一页"
+          title="Next Page"
           @click.prevent="gotoPage(data.current+1)">&gt;</a>
         <a
           :class="{undisable: !data.hasNext}"
           href="#"
-          title="末页"
-          @click.prevent="gotoPage(data.pages)">末</a>
+          title="Last Page"
+          @click.prevent="gotoPage(data.pages)">{{data.pages}}</a>
         <div class="clear"/>
       </div>
     </div>
@@ -143,6 +143,7 @@
     <!-- /课程列表 结束 -->
   </div>
 </template>
+
 <script>
 import courseApi from '@/api/course'
 

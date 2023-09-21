@@ -4,7 +4,7 @@
     <section class="container">
       <header class="comm-title">
         <h2 class="fl tac">
-          <span class="c-333">讲师介绍</span>
+          <span class="c-333">Teacher Introduction</span>
         </h2>
       </header>
       <div class="t-infor-wrap">
@@ -16,7 +16,7 @@
             </section>
             <h3 class="hLh30">
               <span class="fsize24 c-333">{{teacher.name}}&nbsp;
-                {{ teacher.level===1?'高级讲师':'首席讲师' }}
+                {{ teacher.level===1?'Junior':'Senior' }}
               </span>
             </h3>
             <section class="mt10">
