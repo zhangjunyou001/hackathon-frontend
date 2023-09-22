@@ -4,7 +4,7 @@ export default {
   //条件分页课程查询的方法
   getCourseList(page,limit,searchObj) {
     return request({
-      url: `/eduService/coursefront/getFrontInfo/${page}/${limit}`,
+      url: `/eduservice/coursefront/getFrontCourseInfo/${page}/${limit}`,
       method: 'post',
       data: searchObj
     })
@@ -12,7 +12,7 @@ export default {
   //查询所有分类的方法
   getAllSubject() {
     return request({
-      url: '/eduService/subject/getAllSubject',
+      url: '/eduservice/subject/getAllSubject',
       method: 'get'
     })
   },

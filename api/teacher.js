@@ -4,14 +4,14 @@ export default {
     //分页讲师查询的方法
   getTeacherList(page,limit) {
     return request({
-      url: `/eduService/teacherfront/getTeacherFrontList/${page}/${limit}`,
+      url: `/eduservice/teacherfront/getTeacherFrontList/${page}/${limit}`,
       method: 'post'
     })
   },
   //讲师详情的方法
   getTeacherInfo(id) {
     return request({
-      url: `/eduService/teacherfront/getTeacherFrontInfo/${id}`,
+      url: `/eduservice/teacherfront/getTeacherFrontInfo/${id}`,
       method: 'get'
     })
   }
