@@ -43,9 +43,9 @@
         <div class="btn">
           <input type="button" class="sign-up-button" value="Register" @click="submitRegister()">
         </div>
-        
+
       </el-form>
-      
+
     </div>
   </div>
 </template>
@@ -59,34 +59,29 @@
     layout: 'sign',
     data() {
       return {
-        params: { //封装注册输入数据
+        params: {
           mobile: '',
-          code: '',  //验证码
+          code: '',
           nickname: '',
           password: ''
         },
-        sending: true,      //是否发送验证码
-        second: 60,        //倒计时间
+        sending: true,
+        second: 60,
         codeTest: 'Get Code'
       }
     },
     methods: {
-     
-       //注册提交的方法
        submitRegister() {
          registerApi.registerMember(this.params)
           .then(response => {
-            //提示注册成功
               this.$message({
                 type: 'success',
-                message: "注册成功"
+                message: "registry success"
               })
-            //跳转登录页面
             this.$router.push({path:'/login'})
-              
+
           })
        },
-       //倒计时
        timeDown() {
         let result = setInterval(() => {
           --this.second;
@@ -94,31 +89,27 @@
           if (this.second < 1) {
             clearInterval(result);
             this.sending = true;
-            //this.disabled = false;
             this.second = 60;
             this.codeTest = "Get Code"
           }
         }, 1000);
 
       },
-       //通过输入手机号发送验证码
        getCodeFun() {
          registerApi.sendCode(this.params.mobile)
           .then(response => {
               this.sending = false
-              //调用倒计时的方法
               this.timeDown()
           })
        },
 
       checkPhone (rule, value, callback) {
-        //debugger
         if (!(/^1[34578]\d{9}$/.test(value))) {
           return callback(new Error('Cell number format is incorrect!'))
         }
         return callback()
       },
-      
+
     }
   }
 </script>

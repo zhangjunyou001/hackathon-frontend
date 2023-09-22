@@ -1,9 +1,15 @@
 {
   "name": "guli",
   "version": "1.0.0",
-  "description": "����ѧԺǰ̨��վ",
+  "description": "hackathon",
   "author": "Long <1525684805@qq.com>",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3000"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
