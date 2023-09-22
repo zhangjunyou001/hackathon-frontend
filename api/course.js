@@ -4,8 +4,8 @@ export default {
   //条件分页课程查询的方法
   getCourseList(page,limit,searchObj) {
     return request({
-      url: `/eduservice/coursefront/getFrontCourseInfo/${page}/${limit}`,
-      method: 'post',
+      url: `/eduservice/coursefront/getFrontCourseList/${page}/${limit}`,
+      method: 'get',
       data: searchObj
     })
   },

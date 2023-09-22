@@ -4,7 +4,7 @@ import { MessageBox, Message } from 'element-ui'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: `http://localhost:8222`, // api的base_url
+  baseURL: `http://44.203.136.211:8222`, // api的base_url
   timeout: 20000 // 请求超时时间
 })
 // 第三步http request 拦截器
