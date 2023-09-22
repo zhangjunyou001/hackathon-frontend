@@ -3,14 +3,14 @@ import request from '@/utils/request'
 export default {
   getCourseList(page,limit,searchObj) {
     return request({
-      url: `/eduService/coursefront/getFrontInfo/${page}/${limit}`,
+      url: `/eduservice/coursefront/getFrontCourseInfo/${page}/${limit}`,
       method: 'post',
       data: searchObj
     })
   },
   getAllSubject() {
     return request({
-      url: '/eduService/subject/getAllSubject',
+      url: '/eduservice/subject/getAllSubject',
       method: 'get'
     })
   },
