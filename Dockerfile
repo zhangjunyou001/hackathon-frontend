@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the Vue.js app for production
-RUN npm run build
+#RUN npm run build
 
 # Expose port 3000
 EXPOSE 3000
